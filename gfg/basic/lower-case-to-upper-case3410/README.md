@@ -25,13 +25,20 @@ Explanation: Each lowercase character in the string is converted to uppercase.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-31T10:43:57.969Z  
+**Submitted:** 2026-10-31T10:49:26.357Z  
 
 ```java
 class Solution {
     public String toUpper(String s) {
         // code here
-        return s.toUpperCase();
+       // return s.toUpperCase();
+       
+       StringBuilder sb=new StringBuilder();
+       for(int i=0;i<s.length();i++){
+           char ch=s.charAt(i);
+           sb.append((char)('A'+ch-'a'));
+       }
+       return sb.toString();
     }
 }
 ```
