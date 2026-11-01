@@ -25,7 +25,7 @@ Explanation: Each lowercase character in the string is converted to uppercase.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-31T10:59:51.105Z  
+**Submitted:** 2026-11-01T15:03:31.886Z  
 
 ```java
 class Solution {
