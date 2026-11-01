@@ -44,34 +44,35 @@ Output: 21
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 40.8 MB  
-**Submitted:** 2026-11-01T14:46:40.095Z  
+**Memory:** 41 MB  
+**Submitted:** 2026-11-01T14:49:58.091Z  
 
 ```java
 class Solution {
     public int reverse(int x) {
-        float rev = 0;
+
+        int rev = 0;
 
         while (x != 0) {
 
-            float rem = x % 10;
+            int rem = x % 10;
             x = x / 10;
 
             // Check overflow
             if (rev > Integer.MAX_VALUE / 10 ||
-                (rev == Integer.MAX_VALUE / 10 && rem > 7)) {
+               (rev == Integer.MAX_VALUE / 10 && rem > 7)) {
                 return 0;
             }
 
             if (rev < Integer.MIN_VALUE / 10 ||
-                (rev == Integer.MIN_VALUE / 10 && rem < -8)) {
+               (rev == Integer.MIN_VALUE / 10 && rem < -8)) {
                 return 0;
             }
 
             rev = rev * 10 + rem;
         }
 
-        return (int)rev;
+        return rev;
     }
 }
 ```
