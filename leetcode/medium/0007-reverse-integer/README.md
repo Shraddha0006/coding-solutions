@@ -44,27 +44,33 @@ Output: 21
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41 MB  
-**Submitted:** 2026-11-01T14:40:15.136Z  
+**Memory:** 40.8 MB  
+**Submitted:** 2026-11-01T14:46:40.095Z  
 
 ```java
 class Solution {
     public int reverse(int x) {
-        //long y=Math.abs(x);
-        long y=x;
-        long rev=0;
-        while(y>0){
-            long rem=y%10;
-            rev=rev*10+rem;
-            y=y/10;
-        }
-        if(y<0){
-            while(y<0){
-                long rem=y%10;
-                rev=rev*10+rem;
-                y=y/10;
+        float rev = 0;
+
+        while (x != 0) {
+
+            float rem = x % 10;
+            x = x / 10;
+
+            // Check overflow
+            if (rev > Integer.MAX_VALUE / 10 ||
+                (rev == Integer.MAX_VALUE / 10 && rem > 7)) {
+                return 0;
             }
+
+            if (rev < Integer.MIN_VALUE / 10 ||
+                (rev == Integer.MIN_VALUE / 10 && rem < -8)) {
+                return 0;
+            }
+
+            rev = rev * 10 + rem;
         }
+
         return (int)rev;
     }
 }
