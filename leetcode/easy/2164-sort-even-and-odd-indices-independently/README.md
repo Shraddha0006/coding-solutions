@@ -48,9 +48,9 @@ The resultant array formed is [2,1], which is the same as the initial array.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 16.56%)  
-**Memory:** 45.8 MB (beats 72.73%)  
-**Submitted:** 2026-10-28T09:44:10.754Z  
+**Runtime:** 7 ms (beats 19.71%)  
+**Memory:** 46 MB (beats 67.23%)  
+**Submitted:** 2026-11-01T14:56:29.523Z  
 
 ```java
 class Solution {
