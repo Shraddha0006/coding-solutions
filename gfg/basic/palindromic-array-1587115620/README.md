@@ -31,20 +31,34 @@ Explanation: 20 is not a palindrome hence the output is false.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-03T08:58:18.659Z  
+**Submitted:** 2026-11-03T09:01:01.508Z  
 
 ```java
 class Solution {
     public static boolean isPalinArray(int[] arr) {
         
         // code here.
-        for(int num:arr){
-            int orignal=num;
+        // for(int num:arr){
+        //     int orignal=num;
+        //     int reverse=0;
+        //     while(num>0){
+        //         int rem=num%10;
+        //         reverse=reverse*10+rem;
+        //         num=num/10;
+        //     }
+        //     if(orignal!=reverse){
+        //         return false;
+        //     }
+        // }
+        // return true;
+        
+        for(int i=0;i<arr.length;i++){
+            int orignal=arr[i];
             int reverse=0;
-            while(num>0){
-                int rem=num%10;
+            while(arr[i]>0){
+                int rem=arr[i]%10;
                 reverse=reverse*10+rem;
-                num=num/10;
+                arr[i]=arr[i]/10;
             }
             if(orignal!=reverse){
                 return false;
