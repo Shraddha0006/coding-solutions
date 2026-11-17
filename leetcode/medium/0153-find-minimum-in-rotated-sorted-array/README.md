@@ -59,22 +59,22 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.1 MB (beats 92.58%)  
-**Submitted:** 2026-11-17T09:52:40.876Z  
+**Runtime:** 1 ms  
+**Memory:** 42 MB  
+**Submitted:** 2026-11-17T09:53:00.927Z  
 
 ```java
 class Solution {
     public int findMin(int[] nums) {
-        // Arrays.sort(nums);
-        // return nums[0];
-        int mini=nums[0];
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]<mini){
-                mini=nums[i];
-            }
-        }
-        return mini;
+        Arrays.sort(nums);
+        return nums[0];
+        // int mini=nums[0];
+        // for(int i=0;i<nums.length;i++){
+        //     if(nums[i]<mini){
+        //         mini=nums[i];
+        //     }
+        // }
+        // return mini;
     }
 }
 ```
