@@ -41,14 +41,28 @@ Explanation: The square root of 8 is 2.82842..., and since we round it down to t
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.7 MB  
-**Submitted:** 2026-11-17T10:08:57.191Z  
+**Runtime:** 2 ms (beats 53.15%)  
+**Memory:** 42 MB (beats 83.06%)  
+**Submitted:** 2026-11-17T10:23:49.223Z  
 
 ```java
 class Solution {
     public int mySqrt(int x) {
-        return x*x;
+        int l=0;
+        int r=x;
+        int ans=-1;
+        while(l<=r){
+            int mid=l+(r-l)/2;
+            long square=(long) mid * (long)mid;
+            if(square>(long)x){
+                r=mid-1;
+            }
+            else{
+                ans=mid;
+                l=mid+1;
+            }
+        }
+        return ans;
     }
 }
 ```
