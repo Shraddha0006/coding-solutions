@@ -48,9 +48,9 @@ Output: 4
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.7 MB  
-**Submitted:** 2026-11-17T08:56:20.756Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.5 MB (beats 59.72%)  
+**Submitted:** 2026-11-17T08:56:26.462Z  
 
 ```java
 class Solution {
